@@ -10,18 +10,18 @@ html, body, #map, #wrapper {
 }
 
 .slider {
+	display: flex;
 	position: relative;
+	top: 91%;
+	width: 85%;
 	z-index: 9;
+	opacity: 0.75;
+	color: hsl(0, 0%, 96%);
 	background-color: hsl(0, 0%, 14%);
 	padding: 7px;
-	border-radius: 50px;
-	opacity: 0.75;
-	width: 85%;
-	top: 91%;
+	border-radius: 50px;	
 	margin-right: auto;
 	margin-left: auto;
-	display: flex;
-	color: hsl(0, 0%, 96%);
 }
 
 .flex-item {

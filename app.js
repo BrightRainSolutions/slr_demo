@@ -6,14 +6,13 @@ require([
 ], function (Map, MapView, SceneView, MapImageLayer) {
 
 	Vue.component('map-component', {
-		template: 
-		`<div id="wrapper">
+		template: `<div id="wrapper">
 			<div id="map"></div>
 			<div class="slider">
-        <output class="flex-item" for="sliderWithValue">SLR: {{ SLRVal }} ft</output>
-        <input v-model="SLRVal" step="1" min="0" max="10" value="0" type="range">
-      </div>
-    </div>`,
+				<output class="flex-item" for="sliderWithValue">SLR: {{ SLRVal }} ft</output>
+				<input v-model="SLRVal" step="1" min="0" max="10" value="0" type="range">
+			</div>
+		</div>`,
 		data: function () {
 			return {
 				SLRVal: 0,
@@ -24,13 +23,13 @@ require([
 			}
 		},
 		watch: {
-	    SLRVal: function(newVal) {
-        this.SLRVal = newVal
-        this.seaLevelObject.layers[newVal].visible = true;
-        this.seaLevelObject.layers[this.seaLevelObject.lastVis].visible = false;
-        this.seaLevelObject.lastVis = newVal;
-	    }
-	  },
+			SLRVal: function (newVal) {
+				this.SLRVal = newVal
+				this.seaLevelObject.layers[newVal].visible = true;
+				this.seaLevelObject.layers[this.seaLevelObject.lastVis].visible = false;
+				this.seaLevelObject.lastVis = newVal;
+			}
+		},
 		mounted() {
 			var map = new Map({
 				basemap: "dark-gray-vector"
@@ -45,11 +44,11 @@ require([
 			// });
 
 			var view = new MapView({
-        map: map,
-        container: 'map',
-        center: [-122.438556, 48.424270],
-        zoom: 11
-      });
+				map: map,
+				container: 'map',
+				center: [-122.438556, 48.424270],
+				zoom: 11
+			});
 
 			// Sea Level layers direct from NOAA
 			const slr0 = new MapImageLayer({
