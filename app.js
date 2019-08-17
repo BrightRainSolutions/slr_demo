@@ -25,7 +25,6 @@ require([
 		},
 		watch: {
 			SLRVal: function (newVal) {
-				this.SLRVal = newVal
 				this.seaLevelObject.layers[newVal].visible = true;
 				this.seaLevelObject.layers[this.seaLevelObject.lastVis].visible = false;
 				this.seaLevelObject.lastVis = newVal;
