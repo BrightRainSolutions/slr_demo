@@ -20,7 +20,7 @@ Navigate to the project folder
 <pre>
 cd <i>path to cloned repo folder</i>
 </pre>
-Run a simple pytthon web server from inside the root project folder
+Run a simple python web server from inside the root project folder
 ```
 # If Python version returned above is 3.X
 python3 -m http.server
